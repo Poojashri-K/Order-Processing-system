@@ -1,0 +1,151 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* ===== Background ===== */
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ===== Main Container ===== */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* ===== Header ===== */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff7e5f;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Card Sections ===== */
+.card {
+  background: #fffaf6;
+  border: 1px solid #ffe0b2;
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Labels and Inputs ===== */
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0 0 6px rgba(255, 126, 95, 0.3);
+}
+
+/* ===== Buttons (Balanced Warm Orange Gradient) ===== */
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 12px 10px 0 0;
+  transition: 0.3s ease;
+  color: #fff;
+  background: linear-gradient(90deg, #ff8533, #ff5e3a); /* perfect mid-range orange */
+  box-shadow: 0 4px 14px rgba(255, 120, 50, 0.35);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffa14d, #ff7655);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 120, 50, 0.45);
+}
+
+/* Apply same style to all buttons */
+.btn.primary,
+.btn.secondary,
+.btn.refresh,
+.btn.process,
+.cancel-btn {
+  background: linear-gradient(90deg, #ff8533, #ff5e3a);
+  box-shadow: 0 4px 14px rgba(255, 120, 50, 0.35);
+}
+
+.btn.primary:hover,
+.btn.secondary:hover,
+.btn.refresh:hover,
+.btn.process:hover,
+.cancel-btn:hover {
+  background: linear-gradient(90deg, #ffa14d, #ff7655);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 120, 50, 0.45);
+}
+
+
+/* ===== Orders Section ===== */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Order Item Card (no bottom line) ===== */
+.order-item {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: none; /* 🔥 removes all lines including that bottom one */
+  border-left: 6px solid transparent; /* keep only the priority bar */
+  margin-bottom: 16px;
+}
+
+.order-item:last-child {
+  margin-bottom: 0; /* prevents extra gap at the bottom */
+}
+
